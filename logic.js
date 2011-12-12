@@ -11,6 +11,8 @@ var frameRateAvg = 0;
  */
 var testForAddingObject = 0;
 var timeStep = 1;
+var timePassed = 0;
+var score = 0;
 function logic(){
     if (oldTime === 0){
         oldTime = window.zeroTime;
@@ -37,8 +39,8 @@ function logic(){
             y: 100 + 2 * timeStep,
             xLen: 5,
             yLen: 5,
-            xSpeed: Math.random() * 1500 - 750,
-            ySpeed: Math.random() * 1500 - 750,
+            xSpeed: Math.random() * 150 - 75,
+            ySpeed: Math.random() * 150 - 75,
             moveH: moveH,
             moveV: moveV,
             moveT: moveT,
@@ -53,14 +55,16 @@ function logic(){
     
     // Final calls.
     oldTime = newTime;
+    timePassed += timeStep;
+    score = Math.round(timePassed / 1000);
     setTimeout(function(){input();},16.666667 - timeStep);
 }
 
 function updateRateInfo(){
     document.getElementById("player_info").innerHTML = "Number of objects: " + 
-        objects.length;
+        objects.length + "<br />Your Score : " + score;
     document.getElementById("timer").innerHTML = timeStep;
-    if(everyTenStep == 10){
+    if(everyTenStep == 20){
         document.getElementById("framerate").innerHTML = frameRateAvg / 10;
         everyTenStep = 0;
         frameRateAvg = 0;
