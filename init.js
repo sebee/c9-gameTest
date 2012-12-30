@@ -18,6 +18,8 @@ function init(){
  *    - game should stop when the big object collides with a small object. The
  *      longer the player can avert this the more point (s)he'll get in the end.
  *    - implement a menu system. Work out what should be in it.
+ *    - implement a way to pause the game and then resume at the same place.
+ *    - make sure that during alerts the game is paused.
  *    - track high-scores somehow.
  *    - make the different objects' colours costumizable through in-game options
  */

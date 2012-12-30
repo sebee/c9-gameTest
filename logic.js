@@ -31,7 +31,9 @@ function logic(){
     for (var i = 0; i < objects.length; i++){
         objects[i].moveT();
     }
-    if (testForAddingObject < 1){
+    if (testForAddingObject < 5){
+        // The number if the if condition sets the number of small objects that
+        // appear on the screen at the beginning.
         //alert('b');
         objects.push({
             mass: 1,
