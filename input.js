@@ -97,4 +97,3 @@ function updateInput(){
         objects[0].xSpeed += 1;
     }
 }
-    
